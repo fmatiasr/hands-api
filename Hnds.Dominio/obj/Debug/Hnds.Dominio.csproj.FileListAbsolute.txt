@@ -1,0 +1,6 @@
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\bin\Debug\Hnds.Dominio.dll
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\bin\Debug\Hnds.Dominio.pdb
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.csprojAssemblyReference.cache
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.dll
+C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.pdb
