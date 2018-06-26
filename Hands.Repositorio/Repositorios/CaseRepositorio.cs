@@ -17,8 +17,8 @@ namespace Hands.Repositorio.Repositorios
             using (var db = new SqlConnection(strConexao))
             {
                 db.Execute(@"INSERT INTO
-                            Case(Nome, Url, Ativo) 
-                            VALUES (@Nome, @Url, @Ativo)", obj);
+                            [Hands].[dbo].[Case](Nome, Imagem, Ativo) 
+                            VALUES (@Nome, @Imagem, 1)", obj);
             }
         }
 
@@ -26,9 +26,9 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var sqlConnection = new SqlConnection(strConexao))
             {
-                sqlConnection.Execute(@"UPDATE Case
+                sqlConnection.Execute(@"UPDATE [Hands].[dbo].[Case]
                                        SET Nome = @Nome, 
-                                           Url = @Url,
+                                           Imagem = @Imagem,
                                            Ativo = @Ativo
                                        WHERE Id = @Id", obj);
             }
@@ -38,7 +38,7 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var db = new SqlConnection(strConexao))
             {
-                return db.Query<Case>("Select Id, Nome, Url, Ativo from Case"); 
+                return db.Query<Case>("Select Id, Nome, Imagem, Ativo from [Hands].[dbo].[Case] WHERE Ativo = 1"); 
             }
         }
 
@@ -46,9 +46,9 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var db = new SqlConnection(strConexao))
             {
-                return db.Query<Case>(@"SELECT Id, Nome, Url, Ativo 
-                                            FROM Case 
-                                        WHERE Id = @Id", new { Id = id }).FirstOrDefault();
+                return db.Query<Case>(@"SELECT Id, Nome, Imagem, Ativo 
+                                            FROM [Hands].[dbo].[Case] 
+                                        WHERE Id = @Id AND Ativo = 1", new { Id = id }).FirstOrDefault();
             }
         }
 
@@ -56,7 +56,7 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var sqlConnection = new SqlConnection(strConexao))
             {
-                sqlConnection.Execute(@"UPDATE Case
+                sqlConnection.Execute(@"UPDATE [Hands].[dbo].[Case]
                                          SET Ativo = 0
                                        WHERE Id = @Id", new { Id = id });
             }

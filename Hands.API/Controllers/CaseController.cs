@@ -32,7 +32,7 @@ namespace Hands.API.Controllers
 
         [Route("obter/{id}")]
         [HttpGet]
-        public IHttpActionResult ObterId(int id)
+        public IHttpActionResult ObterId([FromUri] int id)
         {
             try
             {
@@ -44,9 +44,9 @@ namespace Hands.API.Controllers
             }
         }
 
-        [Route("incluir")]
+        [Route("adicionar")]
         [HttpPost]
-        public IHttpActionResult Incluir(Case model)
+        public IHttpActionResult Incluir([FromBody] Case model)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace Hands.API.Controllers
 
         [Route("alterar")]
         [HttpPut]
-        public IHttpActionResult Alterar(Case model)
+        public IHttpActionResult Alterar([FromBody] Case model)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace Hands.API.Controllers
 
         [Route("deletar/{id}")]
         [HttpDelete]
-        public IHttpActionResult Deletar(int id)
+        public IHttpActionResult Deletar([FromUri] int id)
         {
             try
             {

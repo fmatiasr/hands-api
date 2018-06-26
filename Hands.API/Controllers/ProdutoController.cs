@@ -1,14 +1,13 @@
 ﻿using Hands.Dominio.Entidade;
 using Hands.Dominio.Servicos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Hands.API.Controllers
 {
+    [RoutePrefix("produto")]
     public class ProdutoController : ApiController
     {
         IProdutoServico _servico;
@@ -46,9 +45,9 @@ namespace Hands.API.Controllers
             }
         }
 
-        [Route("incluir")]
+        [Route("adicionar")]
         [HttpPost]
-        public IHttpActionResult Incluir(Produto model)
+        public IHttpActionResult Incluir([FromBody] Produto model)
         {
             try
             {

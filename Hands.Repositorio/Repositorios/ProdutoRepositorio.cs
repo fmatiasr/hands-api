@@ -10,20 +10,15 @@ namespace Hands.Repositorio.Repositorios
 {
     public class ProdutoRepositorio : IProdutoRepository
     {
-        protected string strConexao;
-
-        public ProdutoRepositorio()
-        {
-            strConexao = ConfigurationManager.ConnectionStrings["conexaoHands"].ConnectionString;
-        }
-
+        public string strConexao = ConfigurationManager.ConnectionStrings["conexaoHands"].ConnectionString;
+        
         public void Adicionar(Produto obj)
         {
             using (var db = new SqlConnection(strConexao))
             {
                 db.Execute(@"INSERT INTO
-                            Produto(Nome, Url, Ativo) 
-                            VALUES (@Nome, @Url, @Ativo)", obj);
+                            [Hands].[dbo].[Produto](Nome, Imagem, Ativo) 
+                            VALUES (@Nome, @Imagem, 1)", obj);
             }
         }
 
@@ -31,9 +26,9 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var sqlConnection = new SqlConnection(strConexao))
             {
-                sqlConnection.Execute(@"UPDATE Produto
+                sqlConnection.Execute(@"UPDATE [Hands].[dbo].[Produto]
                                        SET Nome = @Nome, 
-                                           Url = @Url,
+                                           Imagem = @Imagem,
                                            Ativo = @Ativo
                                        WHERE Id = @Id", obj);
             }
@@ -43,7 +38,7 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var db = new SqlConnection(strConexao))
             {
-                return db.Query<Produto>("Select Id, Nome, Url, Ativo from Produto");
+                return db.Query<Produto>("Select Id, Nome, Imagem, Ativo from [Hands].[dbo].[Produto] WHERE Ativo = 1");
             }
         }
 
@@ -51,9 +46,9 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var db = new SqlConnection(strConexao))
             {
-                return db.Query<Produto>(@"SELECT Id, Nome, Url, Ativo 
-                                            FROM Produto 
-                                        WHERE Id = @Id", new { Id = id }).FirstOrDefault();
+                return db.Query<Produto>(@"SELECT Id, Nome, Imagem, Ativo 
+                                            FROM [Hands].[dbo].[Produto] 
+                                        WHERE Id = @Id AND Ativo = 1", new { Id = id }).FirstOrDefault();
             }
         }
 
@@ -61,7 +56,7 @@ namespace Hands.Repositorio.Repositorios
         {
             using (var sqlConnection = new SqlConnection(strConexao))
             {
-                sqlConnection.Execute(@"UPDATE Produto
+                sqlConnection.Execute(@"UPDATE [Hands].[dbo].[Produto]
                                          SET Ativo = 0
                                        WHERE Id = @Id", new { Id = id });
             }

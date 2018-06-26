@@ -3,3 +3,15 @@ C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\bin\Debug\Hnds.Dominio.pdb
 C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hands.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.dll
 C:\Users\NOTE JR\Desktop\Hands.API\Hnds.Dominio\obj\Debug\Hnds.Dominio.pdb
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\bin\Debug\Hnds.Dominio.dll
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\bin\Debug\Hnds.Dominio.pdb
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\obj\Debug\Hands.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\obj\Debug\Hands.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\obj\Debug\Hnds.Dominio.dll
+C:\Users\leonardo.carminatti\Desktop\hands-api-master\hands-api-master\Hnds.Dominio\obj\Debug\Hnds.Dominio.pdb
+C:\Projetos\hands-api\Hnds.Dominio\bin\Debug\Hnds.Dominio.dll
+C:\Projetos\hands-api\Hnds.Dominio\bin\Debug\Hnds.Dominio.pdb
+C:\Projetos\hands-api\Hnds.Dominio\obj\Debug\Hands.Dominio.csprojAssemblyReference.cache
+C:\Projetos\hands-api\Hnds.Dominio\obj\Debug\Hands.Dominio.csproj.CoreCompileInputs.cache
+C:\Projetos\hands-api\Hnds.Dominio\obj\Debug\Hnds.Dominio.dll
+C:\Projetos\hands-api\Hnds.Dominio\obj\Debug\Hnds.Dominio.pdb
