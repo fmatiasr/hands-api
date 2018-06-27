@@ -33,7 +33,7 @@ namespace Hands.API.Controllers
 
         [Route("obter/{id}")]
         [HttpGet]
-        public IHttpActionResult ObterId(int id)
+        public IHttpActionResult ObterId([FromUri] int id)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace Hands.API.Controllers
 
         [Route("alterar")]
         [HttpPut]
-        public IHttpActionResult Alterar(Produto model)
+        public IHttpActionResult Alterar([FromBody] Produto model)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace Hands.API.Controllers
 
         [Route("deletar/{id}")]
         [HttpDelete]
-        public IHttpActionResult Deletar(int id)
+        public IHttpActionResult Deletar([FromUri] int id)
         {
             try
             {
